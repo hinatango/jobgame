@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ジョブゲーム ～遊んで学ぶ職業ゲーム～</title>
+</head>
+<body>
+    <header>
+        <h1>ジョブゲーム ～遊んで学ぶ職業ゲーム～</h1>
+    </header>
+    <main id="main-container">
+        <div id="game-area">
+            <img id="job-image" src="images/jobs/nojob.png" alt="現在の職業画像" width="100" height="100" />
+            <p id="status">現在の職業: <span id="job-level">新米無職 (レベル1)</span></p>
+            <div id="workplace-container">
+                <img id="workplace-image" src="images/build/house.png" alt="職場" width="150" height="150" />
+                <p>職場（無職は自宅）をクリックして経験値を稼ごう！</p>
+            </div>
+            <p>経験値: <span id="experience">0</span></p>
+            <p>お金: <span id="money">0</span>円</p>
+            <p>体力: <span id="stamina">10</span></p>
+        </div>
+        <div id="quest-board">
+            <h2>クエストボード</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>クエスト内容</th>
+                        <th>報酬</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="current-quest">経験値を100溜めよう！</td>
+                        <td id="current-reward">100円</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="shop-area">
+            <h2>アイテムショップ</h2>
+            <div class="shop-item">
+                <img src="images/item/drink_1.png" alt="水" width="30" height="30">
+                <button id="water-drink">水 (100円)</button>
+            </div>
+            <div class="shop-item">
+                <img src="images/item/drink_2.png" alt="コーラ" width="30" height="30">
+                <button id="cola-drink">コーラ (200円)</button>
+            </div>
+            <div class="shop-item">
+                <img src="images/item/drink_3.png" alt="栄養ドリンク" width="30" height="30">
+                <button id="energy-drink">栄養ドリンク (300円)</button>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

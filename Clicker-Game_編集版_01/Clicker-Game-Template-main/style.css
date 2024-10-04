@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    overflow: hidden; /* スクロールを防ぐ */
+}
+
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 10px;
+    padding: 10px;
+    height: 80vh;
+    overflow: hidden;
+}
+
+#game-area, #quest-board, #shop-area {
+    width: 30%;
+    max-width: 30%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#workplace-container {
+    margin: 10px 0;
+}
+
+#workplace-image {
+    cursor: pointer;
+}
+
+button {
+    margin: 3px;
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.shop-item {
+    margin: 5px 0;
+}
+
+#quest-board table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#quest-board th, #quest-board td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+}
