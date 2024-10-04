@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+header {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+}
+
+#main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 10px;
+    padding: 10px;
+    height: 80vh;
+    overflow: hidden;
+}
+
+#game-area, #workplace-area, #shop-area {
+    width: 30%;
+    max-width: 30%;
+    padding: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+#item-shop, #hello-work {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #e8f5e9; /* アイテムショップとハローワークを異なる背景色に設定 */
+    border-radius: 8px;
+}
+
+#hello-work {
+    background-color: #fff3e0; /* ハローワークの背景色を別の色に */
+}
+
+#status, .ability {
+    margin: 2px 0;
+}
+
+.stat-meter p {
+    display: flex;
+    align-items: center;
+    margin: 2px 0;
+}
+
+.stat-value {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.increment-text {
+    font-size: 1em;
+    font-weight: bold;
+    color: red;
+    margin-left: 5px;
+    min-width: 50px;
+}
+
+meter {
+    width: 100%;
+    height: 1em;
+}
+
+#workplace-image {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+button {
+    margin: 3px;
+    padding: 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ddd;
+}
+
+.shop-item, .job-item {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.shop-item img, .job-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.section-title {
+    background-color: #e6f7ff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#quest-board table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#quest-board th, #quest-board td {
+    border: 1px solid #ddd;
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.gain-popup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    color: red;
+    font-weight: bold;
+    display: none;
+    animation: popup 1s ease-in-out;
+}
+
+@keyframes popup {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -150%);
+    }
+    50% {
+        opacity: 1;
+        transform: translate(-50%, -100%);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%);
+    }
+}

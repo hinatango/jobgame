@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>ジョブゲーム ～遊んで学ぶ職業ゲーム～</title>
+</head>
+<body>
+    <header>
+        <h1>ジョブゲーム ～遊んで学ぶ職業ゲーム～</h1>
+    </header>
+    <main id="main-container">
+        <div id="game-area">
+            <img id="job-image" src="images/jobs/nojob.png" alt="現在の職業画像" width="100" height="100" />
+            <p id="status">現在の職業: <span id="job-level">新米無職 (レベル1)</span></p>
+            <p class="ability">能力: <span id="special-ability">他の職業がない場合、経験値2倍</span></p>
+
+            <div class="stat-meter">
+                <p>経験値:<span id="experience" class="stat-value">0</span>ex <span id="experience-increment" class="increment-text">&nbsp;</span></p>
+                <meter id="experience-meter" min="0" max="1000" value="0"></meter>
+            </div>
+
+            <div class="stat-meter">
+                <p>お金:<span id="money" class="stat-value">0</span>円 <span id="money-increment" class="increment-text">&nbsp;</span></p>
+                <meter id="money-meter" min="0" max="1000" value="0"></meter>
+            </div>
+
+            <div class="stat-meter">
+                <p>体力:<span id="stamina" class="stat-value">100</span>p <span id="stamina-increment" class="increment-text">&nbsp;</span></p>
+                <meter id="stamina-meter" min="0" max="100" value="100"></meter>
+            </div>
+
+            <div id="log-area">
+                <h3>ログ</h3>
+                <ul id="log-list">
+                    <!-- ログがここに追加される -->
+                </ul>
+            </div>
+        </div>
+        <div id="workplace-area">
+            <img id="workplace-image" src="images/build/house.png" alt="職場" width="150" height="150" />
+            <p>職場（無職は自宅）をクリックして経験値を稼ごう！</p>
+
+            <div id="quest-board">
+                <h2 class="section-title">クエストボード</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>クエスト内容</th>
+                            <th>報酬</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="current-quest">経験値を溜めてレベルを10にしよう！</td>
+                            <td id="current-reward">100円</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div id="shop-area">
+            <div id="item-shop">
+                <h2>アイテムショップ</h2>
+                <div class="shop-item">
+                    <img src="images/item/drink_1.png" alt="水" width="50" height="50">
+                    <p>アイテム名: 水</p>
+                    <span>所持数: <span id="water-count">0</span></span>
+                    <button id="water-buy">購入: 100円</button>
+                </div>
+                <div class="shop-item">
+                    <img src="images/item/drink_2.png" alt="コーラ" width="50" height="50">
+                    <p>アイテム名: コーラ</p>
+                    <span>所持数: <span id="cola-count">0</span></span>
+                    <button id="cola-buy">購入: 200円</button>
+                </div>
+                <div class="shop-item">
+                    <img src="images/item/drink_3.png" alt="エナドリ" width="50" height="50">
+                    <p>アイテム名: エナドリ</p>
+                    <span>所持数: <span id="energy-drink-count">0</span></span>
+                    <button id="energy-drink-buy">購入: 300円</button>
+                </div>
+            </div>
+            <div id="hello-work">
+                <h2>ハローワーク</h2>
+                <div class="job-item">
+                    <img src="images/jobs/free.png" alt="フリーター" width="50" height="50">
+                    <p>職業名: フリーター (能力: 1秒ごとに自動で1クリック分の効果が発動)</p>
+                    <button id="job-change">1000exを使って転職</button>
+                </div>
+            </div>
+        </div>
+    </main>    
+    <script src="main.js"></script>
+</body>
+</html>
